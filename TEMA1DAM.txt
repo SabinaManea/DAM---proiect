@@ -1,0 +1,9 @@
+TEMA DAM
+
+Aș vrea să fac o aplicație pentru gestionarea activității unui centru de adopție pentru animale.
+Câteva ecrane la care m-am gândit ar fi următoarele:
+- ecran de autentificare și înregistrare
+- ecran principal unde apar animalele disponibile pentru adopție
+- ecran de adăugare animale spre adopție (aici ar fi mai multe câmpuri care trebuie completate pentru a putea introduce un animal în aplicație)
+- ecran cu informațiile utilizatorului
+- ecran cu poze și testimoniale de la oamenii care au adoptat animale de pe aplicație.
