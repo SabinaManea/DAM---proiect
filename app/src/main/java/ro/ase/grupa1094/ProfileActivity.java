@@ -12,41 +12,37 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    EditText etUsername;
-    EditText etPassword;
-    Button btnLogin;
-    Button btnSignUp;
+public class ProfileActivity extends AppCompatActivity {
+    Button btnSaveChanges;
+    Button btnGoToHomepage;
+    EditText etNameProfile;
+    EditText etPasswordProfile;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        etUsername = findViewById(R.id.etUsername);
-        etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
 
+        etNameProfile = findViewById(R.id.etNameProfile);
+        etPasswordProfile = findViewById(R.id.etPasswordProfile);
+        btnGoToHomepage = findViewById(R.id.btnGoToHomepage);
+        btnGoToHomepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HomepageActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, HomepageActivity.class);
                 startActivity(intent);
             }
         });
-        btnSignUp = findViewById(R.id.btnSignUp);
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
+
+        btnSaveChanges = findViewById(R.id.btnSaveChanges);
 
     }
+
 }

@@ -13,10 +13,19 @@
         android:theme="@style/Theme.TEMA2DAM"
         tools:targetApi="31">
         <activity
-            android:name=".ThirdActivity"
+            android:name=".MakeARequestActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomepageActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
