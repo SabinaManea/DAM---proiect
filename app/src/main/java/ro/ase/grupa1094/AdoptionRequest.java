@@ -1,57 +1,62 @@
 package ro.ase.grupa1094;
 
-public class AdoptionRequest {
-    private String adoptator;
-    private String animal;
-    private String data_cerere;
-    private String stare_cerere;
+import java.io.Serializable;
 
-    public AdoptionRequest(String adoptator, String animal, String data_cerere, String stare_cerere) {
-        this.adoptator = adoptator;
+enum Animal {
+    CAT, DOG, BIRD
+}
+public class AdoptionRequest implements Serializable {
+    private String numeAdoptator;
+    private int phoneNumber;
+    private String email;
+    private Animal animal;
+
+    public AdoptionRequest(String numeAdoptator, int phoneNumber, String email, Animal animal) {
+        this.numeAdoptator = numeAdoptator;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
         this.animal = animal;
-        this.data_cerere = data_cerere;
-        this.stare_cerere = stare_cerere;
     }
 
-    public String getAdoptator() {
-        return adoptator;
+    public String getNumeAdoptator() {
+        return numeAdoptator;
     }
 
-    public void setAdoptator(String adoptator) {
-        this.adoptator = adoptator;
+    public void setNumeAdoptator(String numeAdoptator) {
+        this.numeAdoptator = numeAdoptator;
     }
 
-    public String getAnimal() {
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Animal getAnimal() {
         return animal;
     }
 
-    public void setAnimal(String animal) {
+    public void setAnimal(Animal animal) {
         this.animal = animal;
-    }
-
-    public String getData_cerere() {
-        return data_cerere;
-    }
-
-    public void setData_cerere(String data_cerere) {
-        this.data_cerere = data_cerere;
-    }
-
-    public String getStare_cerere() {
-        return stare_cerere;
-    }
-
-    public void setStare_cerere(String stare_cerere) {
-        this.stare_cerere = stare_cerere;
     }
 
     @Override
     public String toString() {
         return "AdoptionRequest{" +
-                "adoptator='" + adoptator + '\'' +
-                ", animal='" + animal + '\'' +
-                ", data_cerere='" + data_cerere + '\'' +
-                ", stare_cerere='" + stare_cerere + '\'' +
+                "numeAdoptator='" + numeAdoptator + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", animal=" + animal +
                 '}';
     }
 }

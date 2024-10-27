@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -15,8 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class HomepageActivity extends AppCompatActivity {
 
-    Button btnAdoptToday;
-    Button btnAddAPet;
+    Button btnChangeProfile;
+    Button btnMakeARequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +29,23 @@ public class HomepageActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    btnMakeARequest = findViewById(R.id.btnMakeARequest);
+    btnChangeProfile = findViewById(R.id.btnChangeProfile);
+    btnChangeProfile.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HomepageActivity.this, ProfileChangesActivity.class);
+            startActivity(intent);
+        }
+    });
+    btnMakeARequest.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HomepageActivity.this, RequestsListActivity.class);
+            startActivity(intent);
+        }
+    });
 
-    btnAdoptToday = findViewById(R.id.btnAdoptToday);
-    btnAddAPet = findViewById(R.id.btnAddAPet);
     }
 
     @Override
@@ -53,6 +68,5 @@ public class HomepageActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
 }
