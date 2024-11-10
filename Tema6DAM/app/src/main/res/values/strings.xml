@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TEMA2DAM</string>
+
+    <string-array name="tipAnimal">
+        <item>CAT</item>
+        <item>DOG</item>
+        <item>BIRD</item>
+    </string-array>
+</resources>
