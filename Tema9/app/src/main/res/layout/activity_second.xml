@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFFF7"
+    tools:context=".HomepageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFFF7"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tvMotto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your New Best Friend is Just a Tap Away!"
+            android:textAlignment="center"
+            android:textColor="#A40E4C"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <ImageView
+            android:id="@+id/ivPets"
+            android:layout_width="wrap_content"
+            android:layout_height="174dp"
+            app:srcCompat="@drawable/pets" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/tvTextMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🐾 Discover your new best friend with our animal adoption app! 🐶❤️ From playful pups to cuddly kittens, we connect loving homes with furry companions in need. Browse profiles and make a difference today. Adopt love, rescue happiness, and create unforgettable memories. Together, we can change lives! 🐾"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/tvMakeaDifference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make A Difference!"
+            android:textAlignment="center"
+            android:textColor="#A40E4C"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnChangeProfile"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2A9D8F"
+            android:text="Change Profile"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMakeARequest"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#264653"
+            android:text="Make A Request"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAboutUs"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2A9D8F"
+            android:text="About Us"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
